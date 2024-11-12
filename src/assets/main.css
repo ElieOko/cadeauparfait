@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.shape {
+  height: 0;
+  width: 0;
+  border-bottom: 30px solid rgb(21, 20, 63);
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+}
+
+   .back {
+    background-size:cover;
+    -webkit-animation: slidein 100s;
+    animation: slidein 100s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+  
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    }
+  
+    @-webkit-keyframes slidein {
+      from {
+        background-position: top;
+        background-size: 1000px;
+      }
+  
+      to {
+        background-position: -100px 0px;
+        background-size: 750px;
+      }
+    }
+  
+    @keyframes slidein {
+      from {
+        background-position: top;
+        background-size: 1000px;
+      }
+  
+      to {
+        background-position: -100px 0px;
+        background-size: 1350px;
+      }
+  
+    }
+.animation {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.animation--infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.animation--up-down {
+  -webkit-animation-name: upDown;
+  animation-name: upDown;
+}
+
+@-webkit-keyframes upDown {
+  0% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+
+  50% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes upDown {
+  0% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+
+  50% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+.button--scroll {
+  bottom: 2rem;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
